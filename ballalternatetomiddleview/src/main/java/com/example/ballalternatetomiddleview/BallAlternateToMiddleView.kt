@@ -210,4 +210,13 @@ class BallAlternateToMiddleView(ctx : Context) : View(ctx) {
             }
         }
     }
+
+    companion object {
+
+        fun create(activity : Activity) : BallAlternateToMiddleView {
+            val view : BallAlternateToMiddleView = BallAlternateToMiddleView(activity)
+            activity.setContentView(view)
+            return view
+        }
+    }
 }
