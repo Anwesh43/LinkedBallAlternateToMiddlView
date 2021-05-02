@@ -1,0 +1,3 @@
+include ':ballalternatetomiddleview'
+include ':app'
+rootProject.name = "LinkedBallAlternateToMiddlView"
