@@ -10,18 +10,18 @@ import android.app.Activity
 import android.content.Context
 
 val colors : Array<Int> = arrayOf(
-    "",
-    "",
-    "",
-    "",
-    ""
+    "#f44336",
+    "#3F51B5",
+    "#FF9800",
+    "#006064",
+    "#311B92"
 ).map {
     Color.parseColor(it)
 }.toTypedArray()
 val circles : Int = 5
 val parts : Int = 4
 val scGap : Float = 0.02f / parts
-val sizeFactor : Float = 8.5f
+val sizeFactor : Float = 12.5f
 val delay : Long = 20
 val backColor : Int = Color.parseColor("#BDBDBD")
 
@@ -32,7 +32,7 @@ fun Float.sinify() : Float = Math.sin(this * Math.PI).toFloat()
 
 fun Canvas.drawBallAlternateToMiddle(scale : Float, w : Float, h : Float, paint : Paint) {
     val r : Float = Math.min(w, h) / sizeFactor
-    val gap : Float = (w - 2 * r) / circles
+    val gap : Float = (w - 2 * r) / (circles - 1)
     val sf : Float = scale.sinify()
     val sf1 : Float = sf.divideScale(0, parts)
     val sf2 : Float = sf.divideScale(1, parts)
